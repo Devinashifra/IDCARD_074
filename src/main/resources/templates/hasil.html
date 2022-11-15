@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>ID Card</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-size: cover;
+                background-position: center;
+                font-family: sans-serif;
+              }
+              .login {
+                position: fixed;
+                top: 50%;
+                left: 45%;
+                transform: translate(-30%, -50%);
+                padding: 50px;
+                width: 500px;
+                border-radius: 15px;
+              } 
+              .box-login {
+                justify-content:space-between;
+                margin: 10px;
+              }
+              .box-login p{
+                  text-align: left;
+              }
+              .gmbr{
+                  float: right;
+                  width: 150px;
+                  height: 150px;   
+              }
+
+            
+    
+        </style>
+    </head>
+    <body>
+        <div class="login">
+
+                <h2>Kartu Tanda Penduduk</h2>
+                
+                <div class="box-login">
+                    
+                    <img th:src="${kimg}" class="gmbr"/> 
+                  
+                </div>
+
+                <div class="box-login">
+                    
+                    Nama Lengkap : <p th:text="${knm}"></p>
+                  
+                </div>
+
+                <div class="box-login">
+                   Tanggal Lahir : <p th:text="${ktgl}"></p>
+                  
+                </div>
+                
+        </div>
+    </body>
+</html>
